@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  update-ipv6:
+    build: .
+    container_name: update_ipv6
+    env_file:
+      - .env
+    restart: always
+    network_mode: host
+    volumes:
+      - ./logs:/app/logs
+
